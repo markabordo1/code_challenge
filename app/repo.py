@@ -255,7 +255,7 @@ class BitbucketRepo(BaseRepo):
     def _get_repo_data(self):
         if not self._repo_data:
             repo_list = []
-            # 100 is the bitbucket max
+            # 100 is the bitbucket max per page
             url = environment.BITBUCKET_BASE_URL + 'repositories/' + self.username + '?pagelen=100'
 
             while True:
@@ -272,7 +272,7 @@ class BitbucketRepo(BaseRepo):
 
     @property
     def followers_count(self):
-        # 100 is the bitbucket max
+        # 100 is the bitbucket max per page
         # note 'size' is available in the response which is the total number of objects in the response however
         # bitbucket states that `This is an optional element that is not provided in all responses, as it can be expensive to compute.`
         if not self._followers_count:

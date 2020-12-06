@@ -3,6 +3,11 @@ from collections import Counter
 
 
 def get_aggregate_repo_data(username):
+    """
+    This function takes a username and manages the different instances of SCM providers for the aggregate
+    :param username: the username to get data on
+    :type username: str
+    """
     github = GitHubRepo(username)
     bitbucket = BitbucketRepo(username)
     github_summary = github.get_summary()
@@ -12,6 +17,11 @@ def get_aggregate_repo_data(username):
 
 
 def combine_summaries(summaries):
+    """
+    A convenience method to combine the summary output of BaseRepo objects
+    :param summaries: a list of dictionaries from the get_summary() output from one of more BaseReop objects
+    :type summaries: list
+    """
     # todo make this cleaner?
     aggregate = {
         'followers_count': 0,
