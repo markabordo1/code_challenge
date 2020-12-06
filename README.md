@@ -9,10 +9,10 @@ Create a new virtual environment and install the requirements from the requireme
 `python -m run`
 ### Adding environment config 
 Under `app/environment` you can config the following static variables <br />
-`GITHUB_BASE_URL = "https://api.github.com/"
-BITBUCKET_BASE_URL = "https://api.bitbucket.org/2.0/"
-GITHUB_AUTH_ENABLED = False
-GITHUB_AUTH_TOKEN = 'REDACTED'`
+GITHUB_BASE_URL = "https://api.github.com/" <br />
+BITBUCKET_BASE_URL = "https://api.bitbucket.org/2.0/" <br />
+GITHUB_AUTH_ENABLED = False <br />
+GITHUB_AUTH_TOKEN = 'REDACTED'<br />
 
 This will control the base urls for each SCM here and also add authentication to be managed else where and not in version control
 
