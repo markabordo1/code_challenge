@@ -7,6 +7,15 @@ Create a new virtual environment and install the requirements from the requireme
 `pip install -r requirements.txt`
 ### Running the Flask server <br />
 `python -m run`
+### Adding environment config 
+Under `app/environment` you can config the following static variables <br />
+`GITHUB_BASE_URL = "https://api.github.com/"
+BITBUCKET_BASE_URL = "https://api.bitbucket.org/2.0/"
+GITHUB_AUTH_ENABLED = False
+GITHUB_AUTH_TOKEN = 'REDACTED'`
+
+This will control the base urls for each SCM here and also add authentication to be managed else where and not in version control
+
 ### Sending a request
 The primary end point for this service is <br />
 `http://localhost:5000/api/v1/aggregate`
